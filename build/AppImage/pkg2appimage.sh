@@ -5,5 +5,5 @@ if [ ! -f pkg2appimage-1807-x86_64.AppImage ]; then
     chmod +x pkg2appimage-1807-x86_64.AppImage
 fia
 
-ARCH=x86_64 ./pkg2appimage-1807-x86_64.AppImage ./build/AppImage/tlpui.pkg.yml
+# ARCH=x86_64 ./pkg2appimage-1807-x86_64.AppImage ./build/AppImage/tlpui.pkg.yml
 mv out/TLP_UI-.glibc2.32-x86_64.AppImage out/TLP_UI-x86_64.AppImage
