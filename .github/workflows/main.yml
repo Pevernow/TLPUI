@@ -32,7 +32,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          bash ./build/AppImage/pkg2appimage.sh
+          wget -c https://github.com/$(wget -q https://github.com/AppImage/pkg2appimage/releases -O - | grep "pkg2appimage-.*-x86_64.AppImage" | head -n 1 | cut -d '"' -f 2)
+          chmod +x ./pkg2appimage-*.AppImage
+          ./pkg2appimage-*.AppImage  ./build/AppImage/tlpui.pkg.yml
+          mv out/TLP_UI*.AppImage out/TLP_UI.AppImage
           
       - name: Automatic Releases
         uses: marvinpinto/action-automatic-releases@v1.2.1
