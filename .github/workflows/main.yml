@@ -48,4 +48,4 @@ jobs:
     # Release title (for automatic releases)e
             title: AutoBuild
     # Assets to upload to the release
-            files: out/TLP_UI-x86_64.AppImage
+            files: out/TLP_UI.AppImage
